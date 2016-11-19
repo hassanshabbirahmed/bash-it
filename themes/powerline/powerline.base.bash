@@ -23,11 +23,11 @@ function __powerline_user_info_prompt {
       fi
       ;;
     *)
-      if [[ -n "${SSH_CLIENT}" ]]; then
+#      if [[ -n "${SSH_CLIENT}" ]]; then
         user_info="${USER_INFO_SSH_CHAR}${USER}@${HOSTNAME}"
-      else
-        user_info="${USER}"
-      fi
+#      else
+#        user_info="${USER}"
+#      fi
       ;;
   esac
   [[ -n "${user_info}" ]] && echo "${user_info}|${color}"
